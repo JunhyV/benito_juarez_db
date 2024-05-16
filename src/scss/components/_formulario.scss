@@ -1,0 +1,28 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+
+    &__field{
+        display: flex;
+        flex-direction: column;
+        gap: v.$gap;
+        margin-bottom: v.$pad;
+
+        &--contacto{
+            display: flex;
+            flex-direction: column;
+            gap: v.$gap;
+
+            @include m.telefono-h{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__input, &__select{
+        padding: v.$gap;
+    }
+}

@@ -1,11 +1,61 @@
-body {
-  background-color: #323232;
-  color: white;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/normalize.css/normalize.css");
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.8rem;
+  background-color: #fffffa;
+  font-size: 1.8rem;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+div[class*=container] {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  max-width: 60rem;
+}
+
+/** Media Queries **/
 .lds-dual-ring {
   /* change color here */
-  color: #fff;
+  color: #fffffa;
 }
 
 .lds-dual-ring,
@@ -15,16 +65,15 @@ body {
 
 .lds-dual-ring {
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 25px;
+  height: 25px;
 }
 
 .lds-dual-ring:after {
   content: " ";
   display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 6.4px solid currentColor;
   border-color: currentColor transparent currentColor transparent;
@@ -38,4 +87,135 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+.spinner__config {
+  width: 100%;
+}
+
+.icon--error {
+  color: red;
+}
+.icon--exito {
+  color: greenyellow;
+}
+
+.alerta__error {
+  color: #ff006e;
+}
+
+.link {
+  color: #8338ec;
+  transition: color 0.5s ease;
+}
+.link__contenedor {
+  width: 100%;
+  text-align: center;
+}
+.link:hover {
+  color: #5211ad;
+}
+
+.inicial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.inicial__heading {
+  text-align: center;
+}
+.inicial__logo-contenedor {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.inicial__logo {
+  max-width: 10rem;
+}
+
+.confirmar__p {
+  font-weight: 700;
+}
+.confirmar__span {
+  font-weight: 300;
+}
+.confirmar__contactos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.confirmar__contacto-card p {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+.confirmar__enviar {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+.formulario__field {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.formulario__field--contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 568px) {
+  .formulario__field--contacto {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.formulario__input, .formulario__select {
+  padding: 1rem;
+}
+
+.boton__volver {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background-color: #ff006e;
+  border: none;
+  padding: 1.5rem;
+  color: #fffffa;
+  font-weight: 700;
+  align-self: center;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.5s ease;
+}
+.boton__volver:hover {
+  background-color: #ff2985;
+  cursor: pointer;
+}
+.boton__submit {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  background-color: #8338ec;
+  border: none;
+  padding: 1.5rem;
+  color: #fffffa;
+  font-weight: 700;
+  align-self: center;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.5s ease;
+}
+.boton__submit:hover {
+  background-color: #9a5df0;
+  cursor: pointer;
 }/*# sourceMappingURL=app.css.map */

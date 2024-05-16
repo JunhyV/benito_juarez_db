@@ -1,0 +1,25 @@
+@use '../base/variables' as v;
+.confirmar{
+    &__p{
+        font-weight: v.$bold;
+    }
+    &__span{
+        font-weight: v.$thin;
+    }
+    &__contactos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__contacto-card{
+        & p{
+            margin: 0;
+            margin-bottom: v.$pad;
+        }
+    }
+
+    &__enviar{
+        display: flex;
+        flex-direction: column;
+    }
+}

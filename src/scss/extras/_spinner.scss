@@ -1,6 +1,8 @@
+@use '../base/variables' as v;
+
 .lds-dual-ring {
     /* change color here */
-    color: #fff
+    color: v.$blanco;
   }
   .lds-dual-ring,
   .lds-dual-ring:after {
@@ -8,15 +10,14 @@
   }
   .lds-dual-ring {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 25px;
+    height: 25px;
   }
   .lds-dual-ring:after {
     content: " ";
     display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     border: 6.4px solid currentColor;
     border-color: currentColor transparent currentColor transparent;
@@ -28,5 +29,11 @@
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  .spinner{
+    &__config{
+      width: 100%;
     }
   }

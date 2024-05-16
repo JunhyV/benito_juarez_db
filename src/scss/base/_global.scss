@@ -1,0 +1,54 @@
+@use "variables" as v;
+@import url("https://cdn.jsdelivr.net/npm/normalize.css/normalize.css");
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: v.$fuente_principal;
+  font-size: 1.8rem;
+  background-color: v.$blanco;
+  font-size: v.$txt;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: v.$headings;
+}
+
+h1 {
+  font-size: v.$h1;
+}
+h2 {
+  font-size: v.$h2;
+}
+
+div[class*='container'] {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: v.$pad;
+  padding: v.$pad;
+  border-radius: v.$mar;
+  max-width: 60rem;
+
+}
