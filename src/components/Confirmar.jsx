@@ -8,7 +8,7 @@ const Confirmar = ({ datos, setConfirmar, grupos, parentesco }) => {
   const navigate = useNavigate();
   const { nombre, apellido, curp, grupo, domicilio, nacimiento, contacto } =
     datos;
-
+  
   const obtenerGrupo = grupos.filter((salon) => salon.id === grupo).shift();
 
   async function handleConfirmar() {
@@ -43,6 +43,7 @@ const Confirmar = ({ datos, setConfirmar, grupos, parentesco }) => {
         <button className="boton__volver" onClick={() => setConfirmar(false)}>
           &larr; Volver
         </button>
+        <h1 className="confirmar__heading">Registro</h1>
         <div className="confirmar__personal">
           <p className="confirmar__p">
             Nombre(s): <span className="confirmar__span">{nombre}</span>
@@ -61,14 +62,14 @@ const Confirmar = ({ datos, setConfirmar, grupos, parentesco }) => {
             Fecha de nacimiento:{" "}
             <span className="confirmar__span">{formatoFecha(nacimiento)}</span>
           </p>
-          <h2>Contactos</h2>
+          <h2 className="confirmar__heading">Contactos</h2>
           <p className="confirmar__p">
             Domicilio: <span className="confirmar__span">{domicilio}</span>
           </p>
           <div className="confirmar__contactos">
             {contacto.map((cnt) => (
               <div key={cnt.id} className="confirmar__contacto-card">
-                <h3>Contacto {cnt.id}</h3>
+                <h3 className="confirmar__h3">Contacto {cnt.id}</h3>
                 <p className="confirmar__p">
                   Telefono:{" "}
                   <span className="confirmar__span">

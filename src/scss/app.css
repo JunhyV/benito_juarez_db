@@ -18,7 +18,8 @@ body {
   font-size: 1.8rem;
   background-color: #fffffa;
   font-size: 1.8rem;
-  width: 100vw;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 a {
@@ -50,6 +51,19 @@ div[class*=container] {
   padding: 1.5rem;
   border-radius: 3rem;
   max-width: 60rem;
+}
+
+h1[class*=heading], h2[class*=heading] {
+  text-align: center;
+}
+
+p[class*=txt] {
+  line-height: 1.5;
+}
+
+div[class*=contenedor] {
+  display: flex;
+  justify-content: center;
 }
 
 /** Media Queries **/
@@ -94,9 +108,13 @@ div[class*=container] {
 
 .icon--error {
   color: red;
+  width: 5rem;
+  height: 5rem;
 }
 .icon--exito {
   color: greenyellow;
+  width: 5rem;
+  height: 5rem;
 }
 
 .alerta__error {
@@ -135,6 +153,20 @@ div[class*=container] {
   max-width: 10rem;
 }
 
+.confirmar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.confirmar__container {
+  width: 52rem;
+}
+.confirmar__h3 {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
 .confirmar__p {
   font-weight: 700;
 }
@@ -152,6 +184,23 @@ div[class*=container] {
 .confirmar__enviar {
   display: flex;
   flex-direction: column;
+}
+
+.mensaje {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.registro {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 568px) {
+  .registro__container {
+    min-width: 52rem;
+  }
 }
 
 .formulario {

@@ -1,8 +1,12 @@
 .icon{
     &--error{
         color: red;
+        width: 5rem;
+        height: 5rem;
     }
     &--exito{
         color: greenyellow;
+        width: 5rem;
+        height: 5rem;
     }
 }

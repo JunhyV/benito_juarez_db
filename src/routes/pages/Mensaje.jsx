@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import Icon from '../../components/Icon'
+import Icon from "../../components/Icon";
 
 const Mensaje = () => {
   const [searchParams] = useSearchParams();
@@ -51,14 +51,31 @@ const Mensaje = () => {
   }, []);
 
   return (
-    <div className="">
-      {tipo === "1" || tipo === '3' ? <Icon css={"icon--exito"} icon={faCircleCheck} /> : null}
-      {tipo === "1" ? (
-        <Icon css={"icon--error"} icon={faCircleExclamation} />
-      ) : null}
-      {mensaje ? <h1>{mensaje.titulo}</h1> : null}
-      {mensaje ? <p>{mensaje.mensaje}</p> : null}
-      {tipo === "3" ? <Link to='/iniciar-sesion'>Ir a Iniciar Sesión</Link> : null}
+    <div className="mensaje">
+      <div className="mensaje__container">
+        <div className="icon__contenedor">
+          {tipo === "1" || tipo === "3" ? (
+            <Icon css={"icon--exito"} icon={faCircleCheck} />
+          ) : (
+            <Icon css={"icon--error"} icon={faCircleExclamation} />
+          )}
+        </div>
+        {mensaje ? (
+          <h1 className="mensaje__heading">{mensaje.titulo}</h1>
+        ) : null}
+        {mensaje ? <p className="mensaje__txt">{mensaje.mensaje}</p> : null}
+        <div className="boton__contenedor">
+          {tipo === "3" ? (
+            <Link to="/iniciar-sesion" className="boton__volver">
+              Ir a Iniciar Sesión
+            </Link>
+          ) : (
+            <Link className="boton__volver" to="/">
+              Inicio
+            </Link>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

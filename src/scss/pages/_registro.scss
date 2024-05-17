@@ -1,0 +1,11 @@
+@use '../base/mixins' as m;
+
+.registro{
+    display: flex;
+    justify-content: center;
+    &__container{
+        @include m.telefono-h{
+            min-width: 52rem;
+        }
+    }
+}

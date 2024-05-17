@@ -1,5 +1,19 @@
 @use '../base/variables' as v;
 .confirmar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    &__container{
+        width: 52rem;
+    }
+    
+    &__h3{
+        margin: 0;
+        margin-bottom: v.$pad;
+        text-align: center;
+    }
     &__p{
         font-weight: v.$bold;
     }

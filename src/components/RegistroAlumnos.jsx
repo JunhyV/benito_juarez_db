@@ -9,10 +9,9 @@ const RegistroAlumnos = ({
   alerta,
   handleSubmit,
 }) => {
-  console.log(alerta.length);
   return (
     <div className="registro">
-      <div className="regsitro__container">
+      <div className="registro__container">
         <h1 className="registro__heading">Ingresa los datos del alumno</h1>
         <form action="" className="formulario">
           <div className="formulario__field">

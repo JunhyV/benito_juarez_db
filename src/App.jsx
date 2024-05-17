@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Spinner from "./components/Spinner";
 
 function App() {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ function App() {
   let quitarAlerta;
 
   function validarCurp(e) {
+    e.preventDefault()
     if (!curp || curp.length !== 18) {
       if (quitarAlerta) {
         clearTimeout(quitarAlerta);
@@ -60,18 +62,11 @@ function App() {
                 onChange={(e) => setCurp(e.target.value.toUpperCase().trim())}
               />
             </div>
-            <input
-              type="button"
-              value="Registrar o Actualizar"
-              className="boton__submit"
-              onClick={validarCurp}
-            />
+            <button className="boton__submit" onClick={validarCurp}>
+              Registrar o Actualizar {spinner ? <Spinner /> : null}
+            </button>
           </form>
-          {spinner ? (
-            <div className="spinner__centrar">
-              <div className="lds-dual-ring"></div>
-            </div>
-          ) : null}
+
           <div className="link__contenedor">
             <Link to={"/iniciar-sesion"} className="link">
               Personal Administrativo
